@@ -41,8 +41,8 @@
 .step__number {
   font-size: 2rem;
   font-weight: 800;
-  color: var(--color-primary);
-  opacity: 0.25;
+  color: var(--color-accent);
+  opacity: 0.55;
   min-width: 3rem;
   line-height: 1;
 }

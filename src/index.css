@@ -6,15 +6,17 @@
 }
 
 :root {
-  /* Brand colours */
-  --color-primary:    #4f46e5;
-  --color-primary-dk: #3730a3;
-  --color-accent:     #06b6d4;
+  /* Brand colours — exact values from the app icon */
+  --color-primary:     #4961b0;
+  --color-primary-dk:  #3a4e8d;
+  --color-primary-rgb: 73, 97, 176;
+  --color-accent:      #ee8200;
+  --color-accent-rgb:  238, 130, 0;
 
-  /* Light mode surfaces */
-  --color-bg:      #ffffff;
-  --color-surface: #f8fafc;
-  --color-border:  #e2e8f0;
+  /* Light mode surfaces — softened off-white, not stark white */
+  --color-bg:      #fafbfd;
+  --color-surface: #f2f4f9;
+  --color-border:  #e1e5ee;
   --color-text:    #1e293b;
   --color-muted:   #64748b;
 
@@ -29,9 +31,11 @@
 
 /* ── Dark mode overrides ───────────────────────────── */
 [data-theme="dark"] {
-  --color-primary:    #6366f1;   /* slightly brighter indigo for dark bg */
-  --color-primary-dk: #4f46e5;
-  --color-accent:     #22d3ee;
+  --color-primary:     #5e76c9;   /* brighter blue for contrast on dark bg */
+  --color-primary-dk:  #4961b0;
+  --color-primary-rgb: 94, 118, 201;
+  --color-accent:      #ffa733;   /* brighter orange for dark bg */
+  --color-accent-rgb:  255, 167, 51;
 
   --color-bg:      #1e2030;      /* soft dark blue-grey, not pitch black */
   --color-surface: #252840;      /* cards and panels */

@@ -2,14 +2,22 @@ import { createContext, useContext, useEffect, useState } from 'react'
 
 const ThemeContext = createContext(null)
 
+function getInitialTheme() {
+  try {
+    const stored = localStorage.getItem('theme')
+    if (stored === 'light' || stored === 'dark') return stored
+  } catch {
+    // Ignore storage read errors (e.g. storage disabled)
+  }
+
+  if (window.matchMedia?.('(prefers-color-scheme: dark)').matches) {
+    return 'dark'
+  }
+  return 'light'
+}
+
 export function ThemeProvider({ children }) {
-  const [theme, setTheme] = useState(() => {
-    try {
-      return localStorage.getItem('theme') ?? 'light'
-    } catch {
-      return 'light'
-    }
-  })
+  const [theme, setTheme] = useState(getInitialTheme)
 
   useEffect(() => {
     if (typeof document !== 'undefined') {

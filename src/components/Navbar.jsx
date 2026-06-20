@@ -71,7 +71,10 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="container navbar__inner">
-        <Link to="/" className="navbar__logo">Classmap</Link>
+        <Link to="/" className="navbar__logo">
+          <img src="/favicon.ico" alt="Classmap" className="navbar__logo-icon" />
+          Classmap
+        </Link>
 
         <ul className="navbar__links">
           <li>
