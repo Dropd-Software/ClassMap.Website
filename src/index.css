@@ -6,15 +6,19 @@
 }
 
 :root {
-  /* Brand colours — swap these to match your palette */
-  --color-primary:    #4f46e5;   /* indigo */
-  --color-primary-dk: #3730a3;
-  --color-accent:     #06b6d4;   /* cyan highlight */
-  --color-bg:         #ffffff;
-  --color-surface:    #f8fafc;
-  --color-border:     #e2e8f0;
-  --color-text:       #1e293b;
-  --color-muted:      #64748b;
+  /* Brand colours — exact values from the app icon */
+  --color-primary:     #4961b0;
+  --color-primary-dk:  #3a4e8d;
+  --color-primary-rgb: 73, 97, 176;
+  --color-accent:      #ee8200;
+  --color-accent-rgb:  238, 130, 0;
+
+  /* Light mode surfaces — softened off-white, not stark white */
+  --color-bg:      #fafbfd;
+  --color-surface: #f2f4f9;
+  --color-border:  #e1e5ee;
+  --color-text:    #1e293b;
+  --color-muted:   #64748b;
 
   /* Typography */
   --font-sans: 'Inter', system-ui, sans-serif;
@@ -25,8 +29,33 @@
   -webkit-font-smoothing: antialiased;
 }
 
+/* ── Dark mode overrides ───────────────────────────── */
+[data-theme="dark"] {
+  --color-primary:     #5e76c9;   /* brighter blue for contrast on dark bg */
+  --color-primary-dk:  #4961b0;
+  --color-primary-rgb: 94, 118, 201;
+  --color-accent:      #ffa733;   /* brighter orange for dark bg */
+  --color-accent-rgb:  255, 167, 51;
+
+  --color-bg:      #1e2030;      /* soft dark blue-grey, not pitch black */
+  --color-surface: #252840;      /* cards and panels */
+  --color-border:  #363952;      /* subtle dividers */
+  --color-text:    #e2e8f0;      /* off-white, easy on the eyes */
+  --color-muted:   #94a3b8;
+}
+
+/* Smooth colour transitions when switching themes */
+body,
+.navbar,
+.lang-switcher__dropdown,
+.feature-card,
+.footer {
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
 body {
   min-height: 100vh;
+  background: var(--color-bg);
 }
 
 a {
@@ -55,7 +84,7 @@ img {
   font-size: 1rem;
   cursor: pointer;
   border: none;
-  transition: background 0.2s, transform 0.1s;
+  transition: background 0.2s, transform 0.1s, color 0.2s;
 }
 
 .btn:active {
