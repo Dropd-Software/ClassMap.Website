@@ -117,8 +117,10 @@ export default function Navbar() {
 
         {/* Theme toggle */}
         <button
+          type="button"
           className="theme-toggle"
           onClick={toggleTheme}
+          aria-pressed={theme === 'dark'}
           aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
         >
           {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
