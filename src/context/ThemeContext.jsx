@@ -3,13 +3,23 @@ import { createContext, useContext, useEffect, useState } from 'react'
 const ThemeContext = createContext(null)
 
 export function ThemeProvider({ children }) {
-  const [theme, setTheme] = useState(
-    () => localStorage.getItem('theme') ?? 'light'
-  )
+  const [theme, setTheme] = useState(() => {
+    try {
+      return localStorage.getItem('theme') ?? 'light'
+    } catch {
+      return 'light'
+    }
+  })
 
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme)
-    localStorage.setItem('theme', theme)
+    if (typeof document !== 'undefined') {
+      document.documentElement.setAttribute('data-theme', theme)
+    }
+    try {
+      localStorage.setItem('theme', theme)
+    } catch {
+      // Ignore storage write errors (e.g. storage disabled)
+    }
   }, [theme])
 
   function toggleTheme() {
