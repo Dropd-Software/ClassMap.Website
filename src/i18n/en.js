@@ -2,7 +2,6 @@ const en = {
   nav: {
     home: 'Home',
     features: 'Features',
-    cta: 'Get Started',
   },
   landing: {
     hero: {

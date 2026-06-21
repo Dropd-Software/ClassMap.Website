@@ -128,8 +128,6 @@ export default function Navbar() {
         >
           {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
         </button>
-
-        <Link to="/" className="btn btn-primary navbar__cta">{t.nav.cta}</Link>
       </div>
     </nav>
   )
