@@ -182,4 +182,14 @@
   .lang-switcher__trigger {
     padding: 0.4rem;
   }
+
+  /* Greek nav labels (Αρχική, Λειτουργίες) run longer than English —
+     drop the wordmark to just the icon so both still fit without collision */
+  .navbar__logo-text {
+    display: none;
+  }
+
+  .navbar__logo {
+    gap: 0;
+  }
 }
