@@ -2,7 +2,6 @@ const el = {
   nav: {
     home: 'Αρχική',
     features: 'Λειτουργίες',
-    cta: 'Ξεκίνα',
   },
   landing: {
     hero: {
