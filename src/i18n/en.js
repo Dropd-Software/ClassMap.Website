@@ -18,22 +18,18 @@ const en = {
     },
     cards: [
       {
-        icon: '🗓️',
         title: 'Weekly Scheduling',
         body: "Build and manage your school's weekly timetable in minutes, not hours.",
       },
       {
-        icon: '👩‍🏫',
         title: 'Teacher Management',
         body: 'Assign teachers to classes, track availability, and avoid double-bookings.',
       },
       {
-        icon: '🎓',
         title: 'Student Organisation',
         body: 'Group students by level or class and keep track of who goes where.',
       },
       {
-        icon: '🏫',
         title: 'Classroom Allocation',
         body: 'See which rooms are free at a glance and assign them automatically.',
       },
@@ -78,6 +74,16 @@ const en = {
     },
   },
   footer: {
+    tagline: "Your school's schedule, without the headache.",
+    product: {
+      title: 'Product',
+      home: 'Home',
+      features: 'Features',
+    },
+    company: {
+      title: 'Company',
+      contact: 'Contact',
+    },
     copy: 'All rights reserved.',
   },
 }
