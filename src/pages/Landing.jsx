@@ -56,7 +56,11 @@ export default function Landing() {
         <div className="container">
           <h2>{cta.title}</h2>
           <p>{cta.sub}</p>
-          <Link to="/features" className="btn btn-primary">{cta.btn}</Link>
+          <p className="cta-banner__contact-intro">{cta.contact}</p>
+          <div className="cta-banner__contact">
+            <a href={`mailto:${t.contact.email}`}>Email: {t.contact.email}</a>
+            <a href={`tel:${t.contact.phone}`}>Phone: {t.contact.phone}</a>
+          </div>
         </div>
       </section>
 

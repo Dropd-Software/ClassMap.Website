@@ -5,7 +5,7 @@ import './Features.css'
 
 export default function Features() {
   const { t } = useLanguage()
-  const { hero, steps, detail } = t.features
+  const { hero, steps, sections, cta } = t.features
 
   return (
     <div className="page">
@@ -30,17 +30,27 @@ export default function Features() {
         ))}
       </section>
 
-      {/* ── Detail block ──────────────────────────────── */}
-      <section className="detail-block container">
-        <div className="detail-block__text">
-          <h2>{detail.title}</h2>
-          <p>{detail.body}</p>
-          {/* TODO: add a bullet list of specific benefits here */}
-        </div>
+      {/* ── Capability sections ──────────────────────── */}
+      {sections.map((section) => (
+        <section key={section.title} className="capabilities container">
+          <h2 className="capabilities__title">{section.title}</h2>
+          <div className="capabilities__grid">
+            {section.items.map((item) => (
+              <div key={item.name} className="cap-card">
+                <h3 className="cap-card__name">{item.name}</h3>
+                <p className="cap-card__desc">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      ))}
 
-        <div className="detail-block__visual">
-          {/* TODO: replace with a real screenshot or illustration */}
-          <div className="placeholder-img">{detail.mockup}</div>
+      {/* ── Contact CTA ──────────────────────────────── */}
+      <section className="features-cta container">
+        <h2>{cta.title}</h2>
+        <div className="features-cta__contact">
+          <a href={`mailto:${t.contact.email}`}>Email: {t.contact.email}</a>
+          <a href={`tel:${t.contact.phone}`}>Phone: {t.contact.phone}</a>
         </div>
       </section>
 
