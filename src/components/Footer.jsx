@@ -28,8 +28,8 @@ export default function Footer() {
         <div className="footer__col">
           <h4>{company.title}</h4>
           <ul>
-            {/* TODO: replace with your real contact email */}
-            <li><a href="mailto:hello@classmap.gr">{company.contact}</a></li>
+            <li><a href={`mailto:${t.contact.email}`}>{t.contact.email}</a></li>
+            <li><a href={`tel:${t.contact.phone}`}>{t.contact.phone}</a></li>
           </ul>
         </div>
       </div>

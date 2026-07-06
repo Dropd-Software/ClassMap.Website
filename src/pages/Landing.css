@@ -130,3 +130,25 @@
 .cta-banner .btn-primary:hover {
   background: #f0f0ff;
 }
+
+.cta-banner__contact-intro {
+  opacity: 0.85;
+  margin-bottom: 1rem;
+}
+
+.cta-banner__contact {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-banner__contact a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.cta-banner__contact a:hover {
+  text-decoration: underline;
+}

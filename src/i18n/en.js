@@ -5,72 +5,94 @@ const en = {
   },
   landing: {
     hero: {
-      headline: ['Schedule smarter.', 'Teach better.'],
-      sub: 'Classmap helps schools and cram schools build conflict-free weekly schedules in minutes — no spreadsheets, no headaches.',
+      headline: ['The direct solution', 'for scheduling.'],
+      sub: 'ClassMap automatically resolves scheduling conflicts between professors, students, and classrooms to build your weekly schedule in minutes. It centralizes your operations by keeping professors, students, rooms, and schedules in one accessible place.',
       ctaPrimary: 'See How It Works',
       ctaSecondary: 'Learn More',
       mockup: '[ App screenshot / mockup ]',
     },
     overview: {
-      title: 'Everything your school needs',
+      title: 'Core Advantages',
       sub: 'One place to manage teachers, students, classrooms, and schedules.',
     },
     cards: [
       {
         title: 'Weekly Scheduling',
-        body: "Build and manage your school's weekly timetable in minutes, not hours.",
+        body: 'Generate complete schedules efficiently.',
       },
       {
-        title: 'Teacher Management',
-        body: 'Assign teachers to classes, track availability, and avoid double-bookings.',
+        title: 'Professor Management',
+        body: 'Assign staff to sections and track availability.',
       },
       {
         title: 'Student Organisation',
-        body: 'Group students by level or class and keep track of who goes where.',
+        body: 'Group students by section or level.',
       },
       {
         title: 'Classroom Allocation',
-        body: 'See which rooms are free at a glance and assign them automatically.',
+        body: 'Monitor available rooms at a glance to prevent double-booking.',
       },
     ],
     cta: {
-      title: 'Ready to organise your school?',
-      sub: 'Join schools already using Classmap to save hours every week.',
-      btn: 'Get Started Free',
+      title: 'Download ClassMap',
+      sub: 'The application requires a valid license key for activation. Available for Windows, macOS, and Linux.',
+      contact: 'To purchase a license and receive the download link, contact us directly:',
+      btn: 'Get Started',
     },
   },
   features: {
     hero: {
-      title: 'How Classmap Works',
-      sub: 'From setup to a full weekly schedule in under 10 minutes.',
+      title: 'How It Works',
+      sub: 'From zero to a complete schedule in less than 10 minutes:',
     },
     steps: [
       {
         number: '01',
-        title: 'Add your teachers & students',
-        body: 'Import or manually enter your staff and student roster. Set availability windows for each teacher.',
+        title: 'Add Staff & Students',
+        body: 'Input your personnel and set specific professor availability.',
       },
       {
         number: '02',
-        title: 'Define your classrooms',
-        body: "Add your rooms with capacity and equipment info so Classmap knows what's available.",
+        title: 'Define Classrooms',
+        body: 'Register room capacities to establish availability.',
       },
       {
         number: '03',
-        title: 'Generate your schedule',
-        body: 'Pick your subjects and session lengths. Classmap builds a conflict-free weekly timetable instantly.',
+        title: 'Generate Schedule',
+        body: 'Select courses and durations; ClassMap generates a conflict-free timetable.',
       },
       {
         number: '04',
-        title: 'Share & adjust',
-        body: 'Export or share the schedule with staff and students, and make live edits any time.',
+        title: 'Share & Adjust',
+        body: 'Distribute the schedule and make manual adjustments as needed.',
       },
     ],
-    detail: {
-      title: 'Built for cram schools & private academies',
-      body: 'Classmap is designed around the way real tutoring centres operate — flexible hours, rotating teachers, and students who attend multiple sessions.',
-      mockup: '[ Screenshot ]',
+    sections: [
+      {
+        title: 'Everything You Need to Build a Schedule',
+        items: [
+          { name: 'Sections & Classes', desc: 'Group entities hierarchically (e.g., "A1") and handle composite classes that combine multiple groups (e.g., "PE Combined A1+A2").' },
+          { name: 'Professors & Students', desc: 'Manage staff with an intuitive drag-to-paint availability calendar. Track student rosters and assign them directly to classes.' },
+          { name: 'Subjects & Classrooms', desc: 'Maintain flat lists of subjects and physical rooms.' },
+          { name: 'Courses Matrix', desc: 'Link the variables together: assign a Professor, Subject, Class, and Classroom, while defining occurrences, difficulty, and duration.' },
+        ],
+      },
+      {
+        title: 'Generation & Optimization',
+        items: [
+          { name: 'Scheduling Modes', desc: 'Build using predefined periods (Fixed mode) or free-form blocks with specific start/end times (Flexible mode).' },
+          { name: 'Constraint Engine', desc: 'Set custom scheduling rules to reflect staff availability and pedagogical limits, ensuring the final timetable meets your exact operational requirements.' },
+          { name: 'Alternatives Generator', desc: 'Instantly generate multiple valid schedules and choose the one that best optimizes your resources, whether your priority is saving classroom space or improving staff daily routines.' },
+        ],
+      },
+    ],
+    cta: {
+      title: 'Contact us to acquire ClassMap:',
     },
+  },
+  contact: {
+    email: 'hello@classmap.gr',
+    phone: '+30 6970372110',
   },
   footer: {
     tagline: "Your school's schedule, without the headache.",
