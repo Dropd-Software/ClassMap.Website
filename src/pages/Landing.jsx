@@ -29,7 +29,6 @@ export default function Landing() {
 
             <div className="hero__actions">
               <Link to="/features" className="btn btn-primary">{hero.ctaPrimary}</Link>
-              <a href="#features" className="btn btn-outline">{hero.ctaSecondary}</a>
             </div>
 
             {/* TODO: replace with a real screenshot or mockup image */}
