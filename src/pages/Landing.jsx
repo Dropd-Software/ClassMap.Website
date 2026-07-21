@@ -39,6 +39,24 @@ export default function Landing() {
           </div>
         </section>
 
+        {/* ── Limited-time promotion ───────────────────────── */}
+        <section className="promo container">
+          <div className="promo__card">
+            <span className="promo__badge">
+              <GiftIcon width={16} height={16} />
+              {promo.badge}
+            </span>
+            <h2 className="promo__title">{promo.title}</h2>
+            <p className="promo__body">{promo.body}</p>
+            <a
+              href={`mailto:${t.contact.email}?subject=${encodeURIComponent(promo.subject)}`}
+              className="btn btn-accent"
+            >
+              {promo.btn}
+            </a>
+          </div>
+        </section>
+
         <section id="features" className="features-overview container">
           <h2 className="section-title">{overview.title}</h2>
           <p className="section-sub">{overview.sub}</p>
@@ -50,24 +68,6 @@ export default function Landing() {
           </div>
         </section>
       </div>
-
-      {/* ── Limited-time promotion ───────────────────────── */}
-      <section className="promo container">
-        <div className="promo__card">
-          <span className="promo__badge">
-            <GiftIcon width={16} height={16} />
-            {promo.badge}
-          </span>
-          <h2 className="promo__title">{promo.title}</h2>
-          <p className="promo__body">{promo.body}</p>
-          <a
-            href={`mailto:${t.contact.email}?subject=${encodeURIComponent(promo.subject)}`}
-            className="btn btn-accent"
-          >
-            {promo.btn}
-          </a>
-        </div>
-      </section>
 
       {/* ── Meet the team ─────────────────────────────── */}
       <section className="team-section container">
