@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import FeatureCard from '../components/FeatureCard'
-import { CalendarIcon, TeacherIcon, StudentIcon, ClassroomIcon } from '../components/icons'
+import { CalendarIcon, TeacherIcon, StudentIcon, ClassroomIcon, GiftIcon } from '../components/icons'
 import { useLanguage } from '../context/LanguageContext'
 import './Landing.css'
 
@@ -10,7 +10,7 @@ const FEATURE_ICONS = [CalendarIcon, TeacherIcon, StudentIcon, ClassroomIcon]
 
 export default function Landing() {
   const { t } = useLanguage()
-  const { hero, overview, cards, cta } = t.landing
+  const { hero, overview, cards, promo, cta } = t.landing
 
   return (
     <div className="page">
@@ -49,6 +49,24 @@ export default function Landing() {
           </div>
         </section>
       </div>
+
+      {/* ── Limited-time promotion ───────────────────────── */}
+      <section className="promo container">
+        <div className="promo__card">
+          <span className="promo__badge">
+            <GiftIcon width={16} height={16} />
+            {promo.badge}
+          </span>
+          <h2 className="promo__title">{promo.title}</h2>
+          <p className="promo__body">{promo.body}</p>
+          <a
+            href={`mailto:${t.contact.email}?subject=${encodeURIComponent(promo.subject)}`}
+            className="btn btn-accent"
+          >
+            {promo.btn}
+          </a>
+        </div>
+      </section>
 
       {/* ── CTA banner ────────────────────────────────── */}
       <section className="cta-banner">

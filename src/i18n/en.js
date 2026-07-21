@@ -33,6 +33,13 @@ const en = {
         body: 'Monitor available rooms at a glance to prevent double-booking.',
       },
     ],
+    promo: {
+      badge: 'Limited-Time Offer',
+      title: 'First 10 Clients Get a Free Lifetime License',
+      body: "We're onboarding our first schools and cram centers personally. Reach out now and lock in full access to ClassMap, free, for life — no subscription, ever.",
+      btn: 'Claim Your Spot',
+      subject: 'Free Lifetime License Offer',
+    },
     cta: {
       title: 'Download ClassMap',
       sub: 'The application requires a valid license key for activation. Available for Windows, macOS, and Linux.',
@@ -91,7 +98,7 @@ const en = {
     },
   },
   contact: {
-    email: 'hello@classmap.gr',
+    email: 'info@classmap.gr',
     phone: '+30 6970372110',
   },
   footer: {
