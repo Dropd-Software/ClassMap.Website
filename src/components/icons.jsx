@@ -66,3 +66,12 @@ export function GiftIcon(props) {
     </svg>
   )
 }
+
+export function PersonIcon(props) {
+  return (
+    <svg {...iconProps(props)}>
+      <circle cx="12" cy="8" r="4" />
+      <path d="M4 21v-1a8 8 0 0 1 16 0v1" />
+    </svg>
+  )
+}

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import FeatureCard from '../components/FeatureCard'
+import TeamCard from '../components/TeamCard'
 import { CalendarIcon, TeacherIcon, StudentIcon, ClassroomIcon, GiftIcon } from '../components/icons'
 import { useLanguage } from '../context/LanguageContext'
 import './Landing.css'
@@ -10,7 +11,7 @@ const FEATURE_ICONS = [CalendarIcon, TeacherIcon, StudentIcon, ClassroomIcon]
 
 export default function Landing() {
   const { t } = useLanguage()
-  const { hero, overview, cards, promo, cta } = t.landing
+  const { hero, overview, cards, promo, team, cta } = t.landing
 
   return (
     <div className="page">
@@ -65,6 +66,18 @@ export default function Landing() {
           >
             {promo.btn}
           </a>
+        </div>
+      </section>
+
+      {/* ── Meet the team ─────────────────────────────── */}
+      <section className="team-section container">
+        <h2 className="section-title">{team.title}</h2>
+        <p className="section-sub">{team.sub}</p>
+
+        <div className="team-grid">
+          {team.members.map((m, i) => (
+            <TeamCard key={i} name={m.name} role={m.role} accent={i % 2 === 1} />
+          ))}
         </div>
       </section>
 

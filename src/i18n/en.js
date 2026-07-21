@@ -40,6 +40,15 @@ const en = {
       btn: 'Claim Your Spot',
       subject: 'Free Lifetime License Offer',
     },
+    team: {
+      title: 'Meet the Team',
+      sub: 'The people building ClassMap.',
+      // TODO: replace with real names, roles, and photos
+      members: [
+        { name: '[ Team Member Name ]', role: '[ Role / Title ]' },
+        { name: '[ Team Member Name ]', role: '[ Role / Title ]' },
+      ],
+    },
     cta: {
       title: 'Download ClassMap',
       sub: 'The application requires a valid license key for activation. Available for Windows, macOS, and Linux.',

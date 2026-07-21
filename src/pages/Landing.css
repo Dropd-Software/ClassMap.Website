@@ -145,6 +145,18 @@
   line-height: 1.6;
 }
 
+/* ── Meet the team ─────────────────────────────────── */
+.team-section {
+  padding: 1rem 1.5rem 5rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 280px));
+  justify-content: center;
+  gap: 1.5rem;
+}
+
 /* ── CTA banner ────────────────────────────────────── */
 .cta-banner {
   background: var(--color-primary);

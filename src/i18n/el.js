@@ -40,6 +40,15 @@ const el = {
       btn: 'Διεκδικήστε τη Θέση σας',
       subject: 'Προσφορά Δωρεάν Άδειας Διαρκείας',
     },
+    team: {
+      title: 'Γνωρίστε την Ομάδα',
+      sub: 'Οι άνθρωποι πίσω από το ClassMap.',
+      // TODO: replace with real names, roles, and photos
+      members: [
+        { name: '[ Όνομα Μέλους ]', role: '[ Ρόλος / Τίτλος ]' },
+        { name: '[ Όνομα Μέλους ]', role: '[ Ρόλος / Τίτλος ]' },
+      ],
+    },
     cta: {
       title: 'Λήψη του ClassMap',
       sub: 'Η εφαρμογή απαιτεί έγκυρο κλειδί ενεργοποίησης. Διαθέσιμο για Windows, macOS και Linux.',
