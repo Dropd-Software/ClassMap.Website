@@ -51,10 +51,9 @@ const en = {
     team: {
       title: 'Meet the Team',
       sub: 'The people building ClassMap.',
-      // TODO: replace role/title placeholders with the real ones
       members: [
-        { name: 'Panagiotis Petrakopoulos', role: '[ Role / Title ]' },
-        { name: 'Dimitris Orfanidis', role: '[ Role / Title ]' },
+        { name: 'Panagiotis Petrakopoulos' },
+        { name: 'Dimitris Orfanidis' },
       ],
     },
     cta: {
