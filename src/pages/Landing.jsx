@@ -51,6 +51,20 @@ export default function Landing() {
             </span>
             <h2 className="promo__title">{promo.title}</h2>
             <p className="promo__body">{promo.body}</p>
+
+            <div className="promo__tiers">
+              <div className="promo__tier">
+                <h3 className="promo__tier-title">{promo.tier1.title}</h3>
+                <p className="promo__tier-desc">{promo.tier1.desc}</p>
+              </div>
+              <div className="promo__tier">
+                <h3 className="promo__tier-title">{promo.tier2.title}</h3>
+                <p className="promo__tier-desc">{promo.tier2.desc}</p>
+              </div>
+            </div>
+
+            <p className="promo__note">{promo.note}</p>
+
             <a
               href={`mailto:${t.contact.email}?subject=${encodeURIComponent(promo.subject)}`}
               className="btn btn-accent"

@@ -34,9 +34,18 @@ const en = {
       },
     ],
     promo: {
-      badge: 'Limited-Time Offer',
-      title: 'First 10 Clients Get a Free Lifetime License',
-      body: "We're onboarding our first schools and cram centers personally. Reach out now and lock in full access to ClassMap, free, for life — no subscription, ever.",
+      badge: 'Beta',
+      title: 'Beta Access & Early Adopter Promo',
+      body: 'ClassMap is currently in open beta and completely free for all users. Your feedback will drive our official Version 1.0 launch this September. Secure a lifetime license now before spots fill up:',
+      tier1: {
+        title: 'First 10 Users: Free Lifetime Access (All Versions)',
+        desc: 'Includes all future updates, features, and new versions forever.',
+      },
+      tier2: {
+        title: 'Next 40 Users: Free Lifetime Access (V1 Only)',
+        desc: 'Permanent access to the September release (V1.0) at no cost.',
+      },
+      note: 'Note: Everyone gets immediate free access during the beta phase. Contact us today to lock in your lifetime deal.',
       btn: 'Claim Your Spot',
       subject: 'Free Lifetime License Offer',
     },
