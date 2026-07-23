@@ -33,6 +33,31 @@ const en = {
         body: 'Monitor available rooms at a glance to prevent double-booking.',
       },
     ],
+    promo: {
+      badge: 'Beta',
+      title: 'Beta Access & Early Adopter Promo',
+      body: 'ClassMap is currently in open beta and completely free for all users. Your feedback will drive our official Version 1.0 launch this September. Secure a lifetime license now before spots fill up:',
+      tier1: {
+        title: 'First 10 Users: Free Lifetime Access (All Versions)',
+        desc: 'Includes all future updates, features, and new versions forever.',
+      },
+      tier2: {
+        title: 'Next 40 Users: Free Lifetime Access (V1 Only)',
+        desc: 'Permanent access to the September release (V1.0) at no cost.',
+      },
+      note: 'Note: Everyone gets immediate free access during the beta phase. Contact us today to lock in your lifetime deal.',
+      btn: 'Claim Your Spot',
+      subject: 'Free Lifetime License Offer',
+    },
+    team: {
+      title: 'Meet the Team',
+      sub: 'The people building ClassMap.',
+      // TODO: replace role/title placeholders with the real ones
+      members: [
+        { name: 'Panagiotis Petrakopoulos', role: '[ Role / Title ]' },
+        { name: 'Dimitris Orfanidis', role: '[ Role / Title ]' },
+      ],
+    },
     cta: {
       title: 'Download ClassMap',
       sub: 'The application requires a valid license key for activation. Available for Windows, macOS, and Linux.',
@@ -91,7 +116,7 @@ const en = {
     },
   },
   contact: {
-    email: 'hello@classmap.gr',
+    email: 'info@classmap.gr',
     phone: '+30 6970372110',
   },
   footer: {
