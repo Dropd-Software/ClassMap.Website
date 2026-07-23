@@ -43,10 +43,10 @@ const el = {
     team: {
       title: 'Γνωρίστε την Ομάδα',
       sub: 'Οι άνθρωποι πίσω από το ClassMap.',
-      // TODO: replace with real names, roles, and photos
+      // TODO: replace role/title placeholders with the real ones
       members: [
-        { name: '[ Όνομα Μέλους ]', role: '[ Ρόλος / Τίτλος ]' },
-        { name: '[ Όνομα Μέλους ]', role: '[ Ρόλος / Τίτλος ]' },
+        { name: 'Παναγιώτης Πετρακόπουλος', role: '[ Ρόλος / Τίτλος ]' },
+        { name: 'Δημήτρης Ορφανίδης', role: '[ Ρόλος / Τίτλος ]' },
       ],
     },
     cta: {

@@ -5,9 +5,12 @@ import FeatureCard from '../components/FeatureCard'
 import TeamCard from '../components/TeamCard'
 import { CalendarIcon, TeacherIcon, StudentIcon, ClassroomIcon, GiftIcon } from '../components/icons'
 import { useLanguage } from '../context/LanguageContext'
+import panagiotisPhoto from '../assets/team/panagiotis-petrakopoulos.jpg'
+import dimitrisPhoto from '../assets/team/dimitris-orfanidis.jpg'
 import './Landing.css'
 
 const FEATURE_ICONS = [CalendarIcon, TeacherIcon, StudentIcon, ClassroomIcon]
+const TEAM_PHOTOS = [panagiotisPhoto, dimitrisPhoto]
 
 export default function Landing() {
   const { t } = useLanguage()
@@ -76,7 +79,7 @@ export default function Landing() {
 
         <div className="team-grid">
           {team.members.map((m, i) => (
-            <TeamCard key={i} name={m.name} role={m.role} accent={i % 2 === 1} />
+            <TeamCard key={i} name={m.name} role={m.role} photo={TEAM_PHOTOS[i]} accent={i % 2 === 1} />
           ))}
         </div>
       </section>

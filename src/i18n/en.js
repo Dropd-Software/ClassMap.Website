@@ -43,10 +43,10 @@ const en = {
     team: {
       title: 'Meet the Team',
       sub: 'The people building ClassMap.',
-      // TODO: replace with real names, roles, and photos
+      // TODO: replace role/title placeholders with the real ones
       members: [
-        { name: '[ Team Member Name ]', role: '[ Role / Title ]' },
-        { name: '[ Team Member Name ]', role: '[ Role / Title ]' },
+        { name: 'Panagiotis Petrakopoulos', role: '[ Role / Title ]' },
+        { name: 'Dimitris Orfanidis', role: '[ Role / Title ]' },
       ],
     },
     cta: {
