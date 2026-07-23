@@ -68,10 +68,7 @@ export default function Landing() {
 
             <p className="promo__note">{promo.note}</p>
 
-            <a
-              href={`mailto:${t.contact.email}?subject=${encodeURIComponent(promo.subject)}`}
-              className="btn btn-accent"
-            >
+            <a href="#download" className="btn btn-accent">
               {promo.btn}
             </a>
           </div>
@@ -109,7 +106,7 @@ export default function Landing() {
       </section>
 
       {/* ── CTA banner ────────────────────────────────── */}
-      <section className="cta-banner">
+      <section id="download" className="cta-banner">
         <div className="container">
           <h2>{cta.title}</h2>
           <p>{cta.sub}</p>

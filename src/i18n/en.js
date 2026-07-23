@@ -47,7 +47,6 @@ const en = {
       },
       note: 'Note: Everyone gets immediate free access during the beta phase. Contact us today to lock in your lifetime deal.',
       btn: 'Claim Your Spot',
-      subject: 'Free Lifetime License Offer',
     },
     team: {
       title: 'Meet the Team',
