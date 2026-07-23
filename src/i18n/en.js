@@ -9,7 +9,7 @@ const en = {
       sub: 'ClassMap automatically resolves scheduling conflicts between professors, students, and classrooms to build your weekly schedule in minutes. It centralizes your operations by keeping professors, students, rooms, and schedules in one accessible place.',
       ctaPrimary: 'See How It Works',
       ctaSecondary: 'Learn More',
-      mockup: '[ App screenshot / mockup ]',
+      mockup: 'ClassMap weekly schedule preview',
     },
     overview: {
       title: 'Core Advantages',

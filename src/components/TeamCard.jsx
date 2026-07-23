@@ -3,16 +3,22 @@ import './TeamCard.css'
 
 /**
  * Props:
- *   name   — team member's name
- *   role   — their role/title
- *   photo  — optional image src; falls back to a generic person icon
- *   accent — use the accent colour instead of primary for the icon fallback
+ *   name          — team member's name
+ *   role          — their role/title
+ *   photo         — optional image src; falls back to a generic person icon
+ *   photoPosition — optional CSS object-position override (e.g. 'center 45%')
+ *   accent        — use the accent colour instead of primary for the icon fallback
  */
-export default function TeamCard({ name, role, photo, accent }) {
+export default function TeamCard({ name, role, photo, photoPosition, accent }) {
   return (
     <div className="team-card">
       {photo ? (
-        <img src={photo} alt={name} className="team-card__photo" />
+        <img
+          src={photo}
+          alt={name}
+          className="team-card__photo"
+          style={photoPosition ? { '--photo-position': photoPosition } : undefined}
+        />
       ) : (
         <div className={`team-card__avatar${accent ? ' team-card__avatar--accent' : ''}`}>
           <PersonIcon />
