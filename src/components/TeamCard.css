@@ -34,7 +34,7 @@
   margin-bottom: 1.1rem;
   border-radius: 50%;
   object-fit: cover;
-  object-position: center 25%;
+  object-position: var(--photo-position, center 25%);
   margin-inline: auto;
 }
 

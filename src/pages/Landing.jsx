@@ -7,10 +7,14 @@ import { CalendarIcon, TeacherIcon, StudentIcon, ClassroomIcon, GiftIcon } from 
 import { useLanguage } from '../context/LanguageContext'
 import panagiotisPhoto from '../assets/team/panagiotis-petrakopoulos.jpg'
 import dimitrisPhoto from '../assets/team/dimitris-orfanidis.jpg'
+import schedulePreview from '../assets/schedule-preview.png'
 import './Landing.css'
 
 const FEATURE_ICONS = [CalendarIcon, TeacherIcon, StudentIcon, ClassroomIcon]
 const TEAM_PHOTOS = [panagiotisPhoto, dimitrisPhoto]
+// Dimitris's source photo is a tall portrait with a lot of headroom above
+// his face — bias the crop further down the frame so his face isn't tiny.
+const TEAM_PHOTO_POSITIONS = [undefined, 'center 45%']
 
 export default function Landing() {
   const { t } = useLanguage()
@@ -35,9 +39,8 @@ export default function Landing() {
               <Link to="/features" className="btn btn-primary">{hero.ctaPrimary}</Link>
             </div>
 
-            {/* TODO: replace with a real screenshot or mockup image */}
             <div className="hero__mockup">
-              <p className="hero__mockup-placeholder">{hero.mockup}</p>
+              <img src={schedulePreview} alt={hero.mockup} className="hero__mockup-img" />
             </div>
           </div>
         </section>
@@ -93,7 +96,14 @@ export default function Landing() {
 
         <div className="team-grid">
           {team.members.map((m, i) => (
-            <TeamCard key={i} name={m.name} role={m.role} photo={TEAM_PHOTOS[i]} accent={i % 2 === 1} />
+            <TeamCard
+              key={i}
+              name={m.name}
+              role={m.role}
+              photo={TEAM_PHOTOS[i]}
+              photoPosition={TEAM_PHOTO_POSITIONS[i]}
+              accent={i % 2 === 1}
+            />
           ))}
         </div>
       </section>
