@@ -51,10 +51,9 @@ const el = {
     team: {
       title: 'Γνωρίστε την Ομάδα',
       sub: 'Οι άνθρωποι πίσω από το ClassMap.',
-      // TODO: replace role/title placeholders with the real ones
       members: [
-        { name: 'Παναγιώτης Πετρακόπουλος', role: '[ Ρόλος / Τίτλος ]' },
-        { name: 'Δημήτρης Ορφανίδης', role: '[ Ρόλος / Τίτλος ]' },
+        { name: 'Παναγιώτης Πετρακόπουλος' },
+        { name: 'Δημήτρης Ορφανίδης' },
       ],
     },
     cta: {

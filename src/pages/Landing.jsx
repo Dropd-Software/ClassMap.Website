@@ -7,7 +7,7 @@ import { CalendarIcon, TeacherIcon, StudentIcon, ClassroomIcon, GiftIcon } from 
 import { useLanguage } from '../context/LanguageContext'
 import panagiotisPhoto from '../assets/team/panagiotis-petrakopoulos.jpg'
 import dimitrisPhoto from '../assets/team/dimitris-orfanidis.jpg'
-import schedulePreview from '../assets/schedule-preview.png'
+import appScreenshot from '../assets/app-screenshot.png'
 import './Landing.css'
 
 const FEATURE_ICONS = [CalendarIcon, TeacherIcon, StudentIcon, ClassroomIcon]
@@ -40,7 +40,7 @@ export default function Landing() {
             </div>
 
             <div className="hero__mockup">
-              <img src={schedulePreview} alt={hero.mockup} className="hero__mockup-img" />
+              <img src={appScreenshot} alt={hero.mockup} className="hero__mockup-img" />
             </div>
           </div>
         </section>
@@ -96,7 +96,6 @@ export default function Landing() {
             <TeamCard
               key={i}
               name={m.name}
-              role={m.role}
               photo={TEAM_PHOTOS[i]}
               photoPosition={TEAM_PHOTO_POSITIONS[i]}
               accent={i % 2 === 1}
