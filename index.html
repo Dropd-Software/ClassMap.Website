@@ -23,7 +23,12 @@
       })();
     </script>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/icon-32.png" sizes="32x32" />
+    <!-- Google Search picks one favicon per site and needs it declared here,
+         not just present at /favicon.ico. It resizes down from the largest
+         suitable file, and recommends squares in multiples of 48px — hence
+         the real multi-size .ico (48/32/16) listed first. -->
+    <link rel="icon" href="/favicon.ico" sizes="48x48 32x32 16x16" />
+    <link rel="icon" type="image/png" href="/icon-48.png" sizes="48x48" />
     <link rel="icon" type="image/png" href="/icon-192.png" sizes="192x192" />
     <link rel="apple-touch-icon" href="/icon-192.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
