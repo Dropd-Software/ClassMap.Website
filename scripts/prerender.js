@@ -29,10 +29,20 @@ const esc = (s) =>
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
 
+// A route becomes a directory (dist/features/index.html), and GitHub Pages
+// redirects /features -> /features/ with a 301. Advertising the slashless form
+// in canonical tags and the sitemap would point search engines at a URL that
+// redirects, so both are built from the trailing-slash form that actually
+// answers 200.
+const canonicalPath = (path) => (path.endsWith('/') ? path : `${path}/`)
+
 const absolute = (path) => new URL(path, SITE_URL).href
 
+// Route URLs only — asset URLs must not gain a trailing slash.
+const routeUrl = (path) => absolute(canonicalPath(path))
+
 function headTags({ path, title, description }) {
-  const url = absolute(path)
+  const url = routeUrl(path)
   const image = absolute(DEFAULT_OG_IMAGE)
 
   const tags = [
@@ -62,7 +72,7 @@ function headTags({ path, title, description }) {
       applicationCategory: 'BusinessApplication',
       operatingSystem: 'Windows, macOS, Linux',
       description,
-      url: SITE_URL,
+      url: routeUrl('/'),
       offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
     }
     tags.push(
@@ -79,7 +89,7 @@ function sitemap(routes) {
     .map(({ path }) =>
       [
         '  <url>',
-        `    <loc>${esc(absolute(path))}</loc>`,
+        `    <loc>${esc(routeUrl(path))}</loc>`,
         `    <lastmod>${lastmod}</lastmod>`,
         `    <priority>${path === '/' ? '1.0' : '0.8'}</priority>`,
         '  </url>',
