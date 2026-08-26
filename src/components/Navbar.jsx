@@ -71,9 +71,9 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="container navbar__inner">
-        <Link to="/" className="navbar__logo" aria-label="Classmap">
-          <img src="/favicon.ico" alt="" className="navbar__logo-icon" />
-          <span className="navbar__logo-text">Classmap</span>
+        <Link to="/" className="navbar__logo" aria-label="Skedio">
+          <img src="/icon-192.png" alt="" className="navbar__logo-icon" />
+          <span className="navbar__logo-text">Skedio</span>
         </Link>
 
         <ul className="navbar__links">

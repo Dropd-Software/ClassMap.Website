@@ -15,12 +15,13 @@ section[id] {
 }
 
 :root {
-  /* Brand colours — exact values from the app icon */
-  --color-primary:     #4961b0;
-  --color-primary-dk:  #3a4e8d;
-  --color-primary-rgb: 73, 97, 176;
-  --color-accent:      #ee8200;
-  --color-accent-rgb:  238, 130, 0;
+  /* Brand colours — orange from the Skedio logo as primary, the old
+     brand blue kept on as a complementary secondary accent */
+  --color-primary:     #ff8c00;
+  --color-primary-dk:  #cc7000;
+  --color-primary-rgb: 255, 140, 0;
+  --color-accent:      #4961b0;
+  --color-accent-rgb:  73, 97, 176;
 
   /* Light mode surfaces — softened off-white, not stark white */
   --color-bg:      #fafbfd;
@@ -40,11 +41,11 @@ section[id] {
 
 /* ── Dark mode overrides ───────────────────────────── */
 [data-theme="dark"] {
-  --color-primary:     #5e76c9;   /* brighter blue for contrast on dark bg */
-  --color-primary-dk:  #4961b0;
-  --color-primary-rgb: 94, 118, 201;
-  --color-accent:      #ffa733;   /* brighter orange for dark bg */
-  --color-accent-rgb:  255, 167, 51;
+  --color-primary:     #ffa733;   /* brighter orange for contrast on dark bg */
+  --color-primary-dk:  #ff8c00;
+  --color-primary-rgb: 255, 167, 51;
+  --color-accent:      #5e76c9;   /* brighter blue for dark bg */
+  --color-accent-rgb:  94, 118, 201;
 
   --color-bg:      #1e2030;      /* soft dark blue-grey, not pitch black */
   --color-surface: #252840;      /* cards and panels */

@@ -5,7 +5,7 @@ import './Features.css'
 
 export default function Features() {
   const { t } = useLanguage()
-  const { hero, steps, sections, cta } = t.features
+  const { hero, steps, sections, detail, cta } = t.features
 
   return (
     <div className="page">
@@ -45,12 +45,19 @@ export default function Features() {
         </section>
       ))}
 
+      {/* ── Detail blurb ──────────────────────────────── */}
+      <section className="detail container">
+        <h2>{detail.title}</h2>
+        <p>{detail.body}</p>
+      </section>
+
       {/* ── Contact CTA ──────────────────────────────── */}
       <section className="features-cta container">
         <h2>{cta.title}</h2>
         <div className="features-cta__contact">
           <a href={`mailto:${t.contact.email}`}>Email: {t.contact.email}</a>
           <a href={`tel:${t.contact.phone}`}>Phone: {t.contact.phone}</a>
+          <a href={`https://${t.contact.website}`}>Website: {t.contact.website}</a>
         </div>
       </section>
 

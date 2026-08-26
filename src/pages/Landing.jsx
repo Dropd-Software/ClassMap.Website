@@ -3,14 +3,15 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import FeatureCard from '../components/FeatureCard'
 import TeamCard from '../components/TeamCard'
-import { CalendarIcon, TeacherIcon, StudentIcon, ClassroomIcon, GiftIcon } from '../components/icons'
+import { ClassroomIcon, CalendarIcon, TeacherIcon, SettingsIcon, GiftIcon } from '../components/icons'
 import { useLanguage } from '../context/LanguageContext'
 import panagiotisPhoto from '../assets/team/panagiotis-petrakopoulos.jpg'
 import dimitrisPhoto from '../assets/team/dimitris-orfanidis.jpg'
 import appScreenshot from '../assets/app-screenshot.png'
 import './Landing.css'
 
-const FEATURE_ICONS = [CalendarIcon, TeacherIcon, StudentIcon, ClassroomIcon]
+// Order matches landing.cards: Entity Configuration, Time Blocks, Staff Availability, Constraint Engine
+const FEATURE_ICONS = [ClassroomIcon, CalendarIcon, TeacherIcon, SettingsIcon]
 const TEAM_PHOTOS = [panagiotisPhoto, dimitrisPhoto]
 // Dimitris's source photo is a tall portrait with a lot of headroom above
 // his face — bias the crop further down the frame so his face isn't tiny.
