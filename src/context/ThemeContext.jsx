@@ -3,6 +3,12 @@ import { createContext, useContext, useEffect, useState } from 'react'
 const ThemeContext = createContext(null)
 
 function getInitialTheme() {
+  // Runs during render, so it also runs under the prerenderer in Node where
+  // there is no window/localStorage. The inline script in index.html applies
+  // the visitor's real theme before first paint, so this fallback is never
+  // what they actually see.
+  if (typeof window === 'undefined') return 'light'
+
   try {
     const stored = localStorage.getItem('theme')
     if (stored === 'light' || stored === 'dark') return stored

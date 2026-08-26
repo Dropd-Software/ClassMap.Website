@@ -25,9 +25,9 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
+      # Also prerenders each route to a real index.html and writes the SPA
+      # fallback (404.html) plus sitemap.xml — see scripts/prerender.js.
       - run: npm run build
-      # SPA fallback so client-side routes (react-router) work on refresh/deep-links
-      - run: cp dist/index.html dist/404.html
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

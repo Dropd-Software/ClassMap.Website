@@ -1,5 +1,9 @@
 <!doctype html>
-<html lang="en">
+<!-- lang matches LanguageProvider's default ('el'), which is what the
+     prerendered markup in dist/ actually contains. The in-page switcher
+     changes copy client-side only, so there is no per-language URL to
+     advertise with hreflang. -->
+<html lang="el">
   <head>
     <!-- Set the theme attribute before first paint (and before React mounts)
          so dark-mode visitors never see a light-mode flash. Kept in sync
@@ -23,6 +27,9 @@
     <link rel="icon" type="image/png" href="/icon-192.png" sizes="192x192" />
     <link rel="apple-touch-icon" href="/icon-192.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Placeholder: scripts/prerender.js replaces this whole line with the
+         per-route title, description, canonical and social tags from
+         src/seo.js. Keep the exact markup — the script asserts on it. -->
     <title>Skedio</title>
   </head>
   <body>
