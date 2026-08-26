@@ -62,10 +62,22 @@ function headTags({ path, title, description }) {
     `<meta name="twitter:image" content="${esc(image)}" />`,
   ]
 
-  // Structured data on the homepage only — describes the product itself, so
-  // repeating it per route would just give Google duplicate entities.
+  // Structured data on the homepage only — these describe the site and the
+  // product themselves, so repeating them per route would just hand Google
+  // duplicate entities.
   if (path === '/') {
-    const ld = {
+    // WebSite is the documented way to tell Google which name to show above
+    // a result. Without it Google infers one, and it inferred the old
+    // ClassMap branding from the pre-rebrand crawl. og:site_name and <title>
+    // are only weaker fallbacks.
+    const website = {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: 'Skedio',
+      url: routeUrl('/'),
+    }
+
+    const app = {
       '@context': 'https://schema.org',
       '@type': 'SoftwareApplication',
       name: 'Skedio',
@@ -75,9 +87,12 @@ function headTags({ path, title, description }) {
       url: routeUrl('/'),
       offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
     }
-    tags.push(
-      `<script type="application/ld+json">${JSON.stringify(ld)}</script>`,
-    )
+
+    for (const ld of [website, app]) {
+      tags.push(
+        `<script type="application/ld+json">${JSON.stringify(ld)}</script>`,
+      )
+    }
   }
 
   return tags.join('\n    ')
