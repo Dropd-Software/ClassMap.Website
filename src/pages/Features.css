@@ -58,42 +58,23 @@
   font-size: 0.95rem;
 }
 
-/* ── Detail block ──────────────────────────────────── */
-.detail-block {
-  padding: 4rem 1.5rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: center;
+/* ── Detail blurb ──────────────────────────────────── */
+.detail {
+  padding: 1rem 1.5rem 3rem;
+  text-align: center;
 }
 
-@media (max-width: 680px) {
-  .detail-block {
-    grid-template-columns: 1fr;
-  }
-}
-
-.detail-block__text h2 {
-  font-size: 1.75rem;
+.detail h2 {
+  font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
-.detail-block__text p {
+.detail p {
   color: var(--color-muted);
   line-height: 1.7;
-}
-
-.placeholder-img {
-  background: var(--color-surface);
-  border: 2px dashed var(--color-border);
-  border-radius: 12px;
-  height: 280px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-muted);
-  font-size: 0.9rem;
+  max-width: 640px;
+  margin-inline: auto;
 }
 
 /* ── Capability sections ──────────────────────────── */

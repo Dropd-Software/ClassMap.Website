@@ -11,8 +11,8 @@ export default function Footer() {
       <div className="container footer__grid">
         <div className="footer__col footer__col--brand">
           <div className="footer__brand">
-            <img src="/favicon.ico" alt="Classmap" className="footer__brand-icon" />
-            Classmap
+            <img src="/icon-192.png" alt="Skedio" className="footer__brand-icon" />
+            Skedio
           </div>
           <p className="footer__tagline">{tagline}</p>
         </div>
@@ -30,13 +30,14 @@ export default function Footer() {
           <ul>
             <li><a href={`mailto:${t.contact.email}`}>{t.contact.email}</a></li>
             <li><a href={`tel:${t.contact.phone}`}>{t.contact.phone}</a></li>
+            <li><a href={`https://${t.contact.website}`}>{t.contact.website}</a></li>
           </ul>
         </div>
       </div>
 
       <div className="container footer__bottom">
         <p className="footer__copy">
-          &copy; {new Date().getFullYear()} Classmap. {copy}
+          &copy; {new Date().getFullYear()} Skedio. {copy}
         </p>
       </div>
     </footer>
