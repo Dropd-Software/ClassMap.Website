@@ -4,7 +4,7 @@ import { mailtoHref, telHref } from '../mailto'
 import './Footer.css'
 
 export default function Footer() {
-  const { t } = useLanguage()
+  const { t, to } = useLanguage()
   const { tagline, product, company, copy } = t.footer
 
   return (
@@ -21,8 +21,8 @@ export default function Footer() {
         <div className="footer__col">
           <h4>{product.title}</h4>
           <ul>
-            <li><Link to="/">{product.home}</Link></li>
-            <li><Link to="/features">{product.features}</Link></li>
+            <li><Link to={to('/')}>{product.home}</Link></li>
+            <li><Link to={to('/features')}>{product.features}</Link></li>
           </ul>
         </div>
 

@@ -57,10 +57,14 @@ export default function Features() {
         <h2>{cta.title}</h2>
         <div className="features-cta__contact">
           <a href={mailtoHref(t.contact.email, t.contact.enquiry)}>
-            Email: {t.contact.email}
+            {t.contact.labels.email}: {t.contact.email}
           </a>
-          <a href={telHref(t.contact.phone)}>Phone: {t.contact.phone}</a>
-          <a href={`https://${t.contact.website}`}>Website: {t.contact.website}</a>
+          <a href={telHref(t.contact.phone)}>
+            {t.contact.labels.phone}: {t.contact.phone}
+          </a>
+          <a href={`https://${t.contact.website}`}>
+            {t.contact.labels.website}: {t.contact.website}
+          </a>
         </div>
       </section>
 

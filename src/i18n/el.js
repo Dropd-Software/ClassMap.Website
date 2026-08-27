@@ -128,6 +128,11 @@ const el = {
     email: 'info@skedio.gr',
     phone: '+30 6970372110',
     website: 'www.skedio.gr',
+    labels: {
+      email: 'Email',
+      phone: 'Τηλέφωνο',
+      website: 'Ιστότοπος',
+    },
     // Prefilled into the visitor's own mail client by the contact CTAs. The
     // blank fields are the details needed to issue a license.
     enquiry: {
