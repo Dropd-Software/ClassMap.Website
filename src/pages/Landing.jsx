@@ -19,7 +19,7 @@ const TEAM_PHOTOS = [panagiotisPhoto, dimitrisPhoto]
 const TEAM_PHOTO_POSITIONS = [undefined, 'center 45%']
 
 export default function Landing() {
-  const { t } = useLanguage()
+  const { t, to } = useLanguage()
   const { hero, overview, cards, promo, team, cta } = t.landing
 
   return (
@@ -38,7 +38,9 @@ export default function Landing() {
             <p className="hero__sub">{hero.sub}</p>
 
             <div className="hero__actions">
-              <Link to="/features" className="btn btn-primary">{hero.ctaPrimary}</Link>
+              <Link to={to('/features')} className="btn btn-primary">
+                {hero.ctaPrimary}
+              </Link>
             </div>
 
             <div className="hero__mockup">
@@ -117,9 +119,11 @@ export default function Landing() {
           <p className="cta-banner__contact-intro">{cta.contact}</p>
           <div className="cta-banner__contact">
             <a href={mailtoHref(t.contact.email, t.contact.enquiry)}>
-              Email: {t.contact.email}
+              {t.contact.labels.email}: {t.contact.email}
             </a>
-            <a href={telHref(t.contact.phone)}>Phone: {t.contact.phone}</a>
+            <a href={telHref(t.contact.phone)}>
+              {t.contact.labels.phone}: {t.contact.phone}
+            </a>
           </div>
         </div>
       </section>

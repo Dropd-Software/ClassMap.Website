@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { useLanguage } from '../context/LanguageContext'
 import { useTheme } from '../context/ThemeContext'
 import './Navbar.css'
@@ -47,8 +47,7 @@ function MoonIcon() {
 }
 
 export default function Navbar() {
-  const { pathname } = useLocation()
-  const { lang, setLang, t, LANGUAGES } = useLanguage()
+  const { lang, t, LANGUAGES, to, hrefForLang, isCurrent } = useLanguage()
   const { theme, toggleTheme } = useTheme()
   const [dropdownOpen, setDropdownOpen] = useState(false)
   const dropdownRef = useRef(null)
@@ -63,27 +62,25 @@ export default function Navbar() {
     return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [])
 
-  function selectLanguage(code) {
-    setLang(code)
-    setDropdownOpen(false)
-  }
-
   return (
     <nav className="navbar">
       <div className="container navbar__inner">
-        <Link to="/" className="navbar__logo" aria-label="Skedio">
+        <Link to={to('/')} className="navbar__logo" aria-label="Skedio">
           <img src="/icon-192.png" alt="" className="navbar__logo-icon" />
           <span className="navbar__logo-text">Skedio</span>
         </Link>
 
         <ul className="navbar__links">
           <li>
-            <Link to="/" className={pathname === '/' ? 'active' : ''}>
+            <Link to={to('/')} className={isCurrent('/') ? 'active' : ''}>
               {t.nav.home}
             </Link>
           </li>
           <li>
-            <Link to="/features" className={pathname === '/features' ? 'active' : ''}>
+            <Link
+              to={to('/features')}
+              className={isCurrent('/features') ? 'active' : ''}
+            >
               {t.nav.features}
             </Link>
           </li>
@@ -94,7 +91,7 @@ export default function Navbar() {
           <button
             className="lang-switcher__trigger"
             onClick={() => setDropdownOpen((o) => !o)}
-            aria-haspopup="listbox"
+            aria-haspopup="true"
             aria-expanded={dropdownOpen}
           >
             <GlobeIcon />
@@ -103,15 +100,17 @@ export default function Navbar() {
           </button>
 
           {dropdownOpen && (
-            <ul className="lang-switcher__dropdown" role="listbox">
+            <ul className="lang-switcher__dropdown">
               {Object.entries(LANGUAGES).map(([code, { label }]) => (
-                <li key={code} role="option" aria-selected={lang === code}>
-                  <button
+                <li key={code}>
+                  <Link
+                    to={hrefForLang(code)}
                     className={lang === code ? 'active' : ''}
-                    onClick={() => selectLanguage(code)}
+                    aria-current={lang === code ? 'true' : undefined}
+                    onClick={() => setDropdownOpen(false)}
                   >
                     {label}
-                  </button>
+                  </Link>
                 </li>
               ))}
             </ul>
