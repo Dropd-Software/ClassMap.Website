@@ -5,6 +5,7 @@ import FeatureCard from '../components/FeatureCard'
 import TeamCard from '../components/TeamCard'
 import { ClassroomIcon, CalendarIcon, TeacherIcon, SettingsIcon, GiftIcon } from '../components/icons'
 import { useLanguage } from '../context/LanguageContext'
+import { mailtoHref, telHref } from '../mailto'
 import panagiotisPhoto from '../assets/team/panagiotis-petrakopoulos.jpg'
 import dimitrisPhoto from '../assets/team/dimitris-orfanidis.jpg'
 import appScreenshot from '../assets/app-screenshot.png'
@@ -69,7 +70,10 @@ export default function Landing() {
 
             <p className="promo__note">{promo.note}</p>
 
-            <a href="#download" className="btn btn-accent">
+            <a
+              href={mailtoHref(t.contact.email, t.contact.enquiry)}
+              className="btn btn-accent"
+            >
               {promo.btn}
             </a>
           </div>
@@ -112,8 +116,10 @@ export default function Landing() {
           <p>{cta.sub}</p>
           <p className="cta-banner__contact-intro">{cta.contact}</p>
           <div className="cta-banner__contact">
-            <a href={`mailto:${t.contact.email}`}>Email: {t.contact.email}</a>
-            <a href={`tel:${t.contact.phone}`}>Phone: {t.contact.phone}</a>
+            <a href={mailtoHref(t.contact.email, t.contact.enquiry)}>
+              Email: {t.contact.email}
+            </a>
+            <a href={telHref(t.contact.phone)}>Phone: {t.contact.phone}</a>
           </div>
         </div>
       </section>

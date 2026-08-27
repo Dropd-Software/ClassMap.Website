@@ -128,6 +128,17 @@ const en = {
     email: 'info@skedio.gr',
     phone: '+30 6970372110',
     website: 'www.skedio.gr',
+    // Prefilled into the visitor's own mail client by the contact CTAs. The
+    // blank fields are the details needed to issue a license.
+    enquiry: {
+      subject: 'Skedio beta access',
+      body:
+        'Hi,\n\n' +
+        "I'd like to get access to Skedio.\n\n" +
+        'Name:\n' +
+        'School / organisation:\n\n' +
+        'Thanks!',
+    },
   },
   footer: {
     tagline: 'The timetable, solved.',

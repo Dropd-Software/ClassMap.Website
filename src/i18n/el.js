@@ -128,6 +128,17 @@ const el = {
     email: 'info@skedio.gr',
     phone: '+30 6970372110',
     website: 'www.skedio.gr',
+    // Prefilled into the visitor's own mail client by the contact CTAs. The
+    // blank fields are the details needed to issue a license.
+    enquiry: {
+      subject: 'Πρόσβαση beta στο Skedio',
+      body:
+        'Γεια σας,\n\n' +
+        'Θα ήθελα να αποκτήσω πρόσβαση στο Skedio.\n\n' +
+        'Ονοματεπώνυμο:\n' +
+        'Σχολείο / Φορέας:\n\n' +
+        'Ευχαριστώ!',
+    },
   },
   footer: {
     tagline: 'Η οριστική λύση για το πρόγραμμά σας.',

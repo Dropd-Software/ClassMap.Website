@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../context/LanguageContext'
+import { mailtoHref, telHref } from '../mailto'
 import './Footer.css'
 
 export default function Footer() {
@@ -28,8 +29,8 @@ export default function Footer() {
         <div className="footer__col">
           <h4>{company.title}</h4>
           <ul>
-            <li><a href={`mailto:${t.contact.email}`}>{t.contact.email}</a></li>
-            <li><a href={`tel:${t.contact.phone}`}>{t.contact.phone}</a></li>
+            <li><a href={mailtoHref(t.contact.email)}>{t.contact.email}</a></li>
+            <li><a href={telHref(t.contact.phone)}>{t.contact.phone}</a></li>
             <li><a href={`https://${t.contact.website}`}>{t.contact.website}</a></li>
           </ul>
         </div>
