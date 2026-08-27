@@ -1,6 +1,7 @@
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { useLanguage } from '../context/LanguageContext'
+import { mailtoHref, telHref } from '../mailto'
 import './Features.css'
 
 export default function Features() {
@@ -55,8 +56,10 @@ export default function Features() {
       <section className="features-cta container">
         <h2>{cta.title}</h2>
         <div className="features-cta__contact">
-          <a href={`mailto:${t.contact.email}`}>Email: {t.contact.email}</a>
-          <a href={`tel:${t.contact.phone}`}>Phone: {t.contact.phone}</a>
+          <a href={mailtoHref(t.contact.email, t.contact.enquiry)}>
+            Email: {t.contact.email}
+          </a>
+          <a href={telHref(t.contact.phone)}>Phone: {t.contact.phone}</a>
           <a href={`https://${t.contact.website}`}>Website: {t.contact.website}</a>
         </div>
       </section>
