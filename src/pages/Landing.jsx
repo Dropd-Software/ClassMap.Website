@@ -5,6 +5,7 @@ import FeatureCard from '../components/FeatureCard'
 import TeamCard from '../components/TeamCard'
 import { ClassroomIcon, CalendarIcon, TeacherIcon, SettingsIcon, GiftIcon } from '../components/icons'
 import { useLanguage } from '../context/LanguageContext'
+import { mailtoHref, telHref } from '../mailto'
 import panagiotisPhoto from '../assets/team/panagiotis-petrakopoulos.jpg'
 import dimitrisPhoto from '../assets/team/dimitris-orfanidis.jpg'
 import appScreenshot from '../assets/app-screenshot.png'
@@ -18,7 +19,7 @@ const TEAM_PHOTOS = [panagiotisPhoto, dimitrisPhoto]
 const TEAM_PHOTO_POSITIONS = [undefined, 'center 45%']
 
 export default function Landing() {
-  const { t } = useLanguage()
+  const { t, to } = useLanguage()
   const { hero, overview, cards, promo, team, cta } = t.landing
 
   return (
@@ -37,7 +38,9 @@ export default function Landing() {
             <p className="hero__sub">{hero.sub}</p>
 
             <div className="hero__actions">
-              <Link to="/features" className="btn btn-primary">{hero.ctaPrimary}</Link>
+              <Link to={to('/features')} className="btn btn-primary">
+                {hero.ctaPrimary}
+              </Link>
             </div>
 
             <div className="hero__mockup">
@@ -69,7 +72,10 @@ export default function Landing() {
 
             <p className="promo__note">{promo.note}</p>
 
-            <a href="#download" className="btn btn-accent">
+            <a
+              href={mailtoHref(t.contact.email, t.contact.enquiry)}
+              className="btn btn-accent"
+            >
               {promo.btn}
             </a>
           </div>
@@ -112,8 +118,12 @@ export default function Landing() {
           <p>{cta.sub}</p>
           <p className="cta-banner__contact-intro">{cta.contact}</p>
           <div className="cta-banner__contact">
-            <a href={`mailto:${t.contact.email}`}>Email: {t.contact.email}</a>
-            <a href={`tel:${t.contact.phone}`}>Phone: {t.contact.phone}</a>
+            <a href={mailtoHref(t.contact.email, t.contact.enquiry)}>
+              {t.contact.labels.email}: {t.contact.email}
+            </a>
+            <a href={telHref(t.contact.phone)}>
+              {t.contact.labels.phone}: {t.contact.phone}
+            </a>
           </div>
         </div>
       </section>

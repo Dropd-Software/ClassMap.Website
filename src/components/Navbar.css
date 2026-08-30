@@ -88,7 +88,7 @@
   z-index: 200;
 }
 
-.lang-switcher__dropdown li button {
+.lang-switcher__dropdown li a {
   display: block;
   width: 100%;
   text-align: left;
@@ -101,12 +101,12 @@
   transition: background 0.1s, color 0.1s;
 }
 
-.lang-switcher__dropdown li button:hover {
+.lang-switcher__dropdown li a:hover {
   background: var(--color-surface);
   color: var(--color-text);
 }
 
-.lang-switcher__dropdown li button.active {
+.lang-switcher__dropdown li a.active {
   color: var(--color-primary);
   font-weight: 600;
 }

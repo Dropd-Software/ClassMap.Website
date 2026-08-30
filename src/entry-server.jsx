@@ -15,11 +15,11 @@ import AppRoutes from './routes'
 export function render(url) {
   return renderToStaticMarkup(
     <ThemeProvider>
-      <LanguageProvider>
-        <StaticRouter location={url}>
+      <StaticRouter location={url}>
+        <LanguageProvider>
           <AppRoutes />
-        </StaticRouter>
-      </LanguageProvider>
+        </LanguageProvider>
+      </StaticRouter>
     </ThemeProvider>,
   )
 }
